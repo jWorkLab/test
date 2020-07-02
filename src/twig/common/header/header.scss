@@ -114,6 +114,10 @@
       }
     }
     &-menu{
+      display: none;
+      @include media-breakpoint-down(md) {
+        display: block;
+      }
       a{
         display: block;
         width: 17px;
@@ -162,7 +166,6 @@
       position: relative;
       @include media-breakpoint-down(sm) {
         border-radius: 0;
-        //width: calc(100% + 150px);
       }
       input{
         position: absolute;

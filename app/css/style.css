@@ -10733,6 +10733,14 @@ a:hover {
     color: #34d692;
     border-bottom: 1px dashed #34d692;
 }
+.header-info-menu {
+    display: none;
+}
+@media (max-width: 991.98px) {
+    .header-info-menu {
+        display: block;
+    }
+}
 .header-info-menu a {
     display: block;
 
