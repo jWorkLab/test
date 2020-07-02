@@ -1,0 +1,32 @@
+.content{
+  @include make-col-ready();
+  @include make-col(8);
+  @include media-breakpoint-down(md) {
+    @include make-col(12);
+  }
+  .wrapper{
+    padding: 0 30px;
+    @include media-breakpoint-down(md) {
+      padding: 0;
+    }
+  }
+}
+
+.image-wrap{
+  margin-top: 43px;
+  margin-bottom: 70px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  @include media-breakpoint-down(sm) {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  img{
+    max-width: 100%;
+    @include media-breakpoint-down(sm) {
+      max-width: 1000px;
+    }
+  }
+}

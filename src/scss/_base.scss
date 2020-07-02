@@ -1,0 +1,28 @@
+html, body {
+    font-family: 'geometria', sans-serif;
+}
+
+.page{
+    padding: 40px 0 90px;
+}
+
+a{
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+::-webkit-input-placeholder {color: $project-gray-500;}
+::-moz-placeholder {opacity: 1; color: $project-gray-500;}
+:-moz-placeholder {opacity: 1; color: $project-gray-500;}
+:-ms-input-placeholder {color: $project-gray-500;}
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
+
+@media (min-width: 1200px) {
+    .container {
+        //max-width: 1080px;
+    }
+}

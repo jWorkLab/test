@@ -1,0 +1,29 @@
+.aside{
+  @include make-col-ready();
+  @include make-col(4);
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  &-info{
+    margin-top: 2px;
+    padding: 0 35px;
+    &-item{
+      display: flex;
+      margin-bottom: 42px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      &__ico{
+        width: 70px;
+      }
+      &__text{
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 1.26;
+        text-transform: uppercase;
+        color: $project-gray-900;
+        padding-top: 5px;
+      }
+    }
+  }
+}

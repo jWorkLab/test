@@ -1,0 +1,42 @@
+.breadcrumbs{
+  ul{
+    margin: 0 30px;
+    padding: 20px 0 23px;
+    list-style: none;
+    display: flex;
+    border-bottom: 3px solid $project-gray-900;
+    @include media-breakpoint-down(md) {
+      margin: 0;
+    }
+    @include media-breakpoint-down(sm) {
+      display: block;
+      padding-bottom: 22px;
+    }
+    li{
+      font-size: 15px;
+      line-height: 1.47;
+      color: $project-gray-500;
+      margin-right: 30px;
+      @include media-breakpoint-down(sm) {
+        display: inline-block;
+        margin-bottom: 4px;
+      }
+      a{
+        color: $project-gray-900;
+        position: relative;
+        border-bottom: 1px dashed transparent;
+        transition: .3s;
+        &:after{
+          content: url("/src/img/design/ico/breadcrumbs-arrow.svg");
+          position: absolute;
+          top: -2px;
+          right: -19px;
+        }
+        &:hover{
+          border-bottom: 1px dashed $project-gray-900;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

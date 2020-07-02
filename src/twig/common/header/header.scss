@@ -1,0 +1,348 @@
+.header{
+  .container{
+    @include media-breakpoint-down(md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &-info{
+    padding: 30px 30px 27px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    @include media-breakpoint-down(md) {
+      padding: 30px 0 27px;
+      order: 1;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 24px;
+    }
+    &-logo{
+      display: flex;
+      &-image{
+        margin-right: 24px;
+        @include media-breakpoint-down(sm) {
+          margin-right: 17px;
+        }
+        img{
+          @include media-breakpoint-down(sm) {
+            width: 57px;
+          }
+        }
+      }
+      &-text{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.27;
+        text-transform: uppercase;
+        color: $project-gray-900;
+        @include media-breakpoint-down(sm) {
+          font-size: 15px;
+        }
+        span{
+          display: block;
+          margin-top: 15px;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 1.47;
+          color: $project-gray-500;
+          text-transform: none;
+          @include media-breakpoint-down(sm) {
+            font-size: 12px;
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+    &-address{
+      margin-left: auto;
+      margin-right: 113px;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+      &-text{
+        font-size: 15px;
+        line-height: 1.7;
+        color: $project-gray-900;
+        margin-bottom: 9px;
+      }
+      &-map{
+        a{
+          display: inline-block;
+          font-size: 15px;
+          line-height: 1.47;
+          color: $project-gray-500;
+          border-bottom: 1px dashed $project-gray-500;
+          transition: .3s;
+          &:hover{
+            color: $project-green;
+            border-bottom: 1px dashed $project-green;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    &-contact{
+      text-align: right;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+      &-phone{
+        margin-bottom: 4px;
+        a{
+          font-weight: normal;
+          font-size: 21px;
+          line-height: 1.23;
+          color: $project-gray-900;
+        }
+      }
+      &-callme{
+        a{
+          display: inline-block;
+          font-size: 15px;
+          line-height: 1.47;
+          color: $project-gray-500;
+          border-bottom: 1px dashed $project-gray-500;
+          transition: .3s;
+          &:hover{
+            color: $project-green;
+            border-bottom: 1px dashed $project-green;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    &-menu{
+      a{
+        display: block;
+        width: 17px;
+        height: 14px;
+        padding: 0;
+        border: 0;
+        background: none;
+        margin-top: 4px;
+        svg{
+          cursor: pointer;
+          position: relative;
+          top: -8px;
+          rect{
+            fill: $project-gray-900;
+            transition: .3s;
+          }
+        }
+        &:hover{
+          svg{
+            rect{
+              fill: $project-gray-500;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-search{
+    display: flex;
+    margin-bottom: 11px;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      order: 3;
+    }
+    @include media-breakpoint-down(sm) {
+      margin: 0 -15px 3px;
+      width: calc(100% + 30px);
+    }
+    &-input{
+      width: 100%;
+      height: 57px;
+      line-height: 55px;
+      border: 1px solid #E9EDF4;
+      box-sizing: border-box;
+      border-radius: 30px;
+      position: relative;
+      @include media-breakpoint-down(sm) {
+        border-radius: 0;
+        //width: calc(100% + 150px);
+      }
+      input{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        outline: none;
+        border: none;
+        background: transparent;
+        padding: 0 50px;
+        font-size: 15px;
+        color: $project-gray-500;
+        @include media-breakpoint-down(sm) {
+          padding: 0 35px;
+        }
+      }
+      button{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 55px;
+        width: 50px;
+        border-radius: 50%;
+        outline: none;
+        border: none;
+        background: transparent;
+        transition: .3s;
+        @include media-breakpoint-down(sm) {
+          width: 30px;
+          border-radius: 0;
+          //border: 1px solid #000;
+        }
+        svg{
+          position: absolute;
+          top: 20px;
+          left: 28px;
+          @include media-breakpoint-down(sm) {
+            left: 15px;
+          }
+          circle{
+            transition: .3s;
+          }
+          rect{
+            transition: .3s;
+          }
+        }
+        &:hover{
+          svg{
+            circle{
+              stroke: $project-gray-900
+            }
+            rect{
+              fill: $project-gray-900
+            }
+          }
+        }
+      }
+    }
+  }
+  &-menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    margin-bottom: -2px;
+    width: 100%;
+    @include media-breakpoint-down(md) {
+      order: 2;
+      padding: 10px 0;
+      margin-top: -65px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: -35px;
+    }
+    &-list{
+      width: 940px;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+      ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        li{
+          margin-right: 30px;
+          @include media-breakpoint-down(lg) {
+            margin-right: 20px;
+          }
+          &:last-of-type{
+            margin-right: 0;
+          }
+          &:nth-of-type(3){
+            margin-right: auto;
+            @include media-breakpoint-down(lg) {
+              margin-right: 20px;
+            }
+          }
+          a{
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 1.26;
+            text-transform: uppercase;
+            color: $project-gray-900;
+            transition: .3s;
+            @include media-breakpoint-down(lg) {
+              font-size: 14px;
+            }
+            svg{
+              position: relative;
+              top: -2px;
+              margin-right: 6px;
+              rect{
+                fill: $project-gray-900;
+                transition: .3s;
+              }
+            }
+            &:hover{
+              color: $project-gray-500;
+              svg{
+                rect{
+                  fill: $project-gray-500;
+                  transition: .3s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &-personal{
+      @include media-breakpoint-down(lg) {
+        display: flex;
+      }
+      @include media-breakpoint-down(md) {
+        justify-content: flex-end;
+        width: 100%;
+      }
+      a{
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        top: -5px;
+        &:last-of-type{
+          margin-left: 16px;
+          margin-right: 5px;
+          @include media-breakpoint-down(sm) {
+            margin-left: 10px;
+          }
+        }
+        svg{
+          path{
+            transition: .3s;
+            fill: $project-gray-900;
+          }
+        }
+        &:hover{
+          svg{
+            path{
+              fill: $project-gray-500;
+            }
+          }
+        }
+      }
+      &-indicator{
+        display: block;
+        font-weight: 700;
+        font-size: 13px;
+        text-align: center;
+        color: #FFFFFF;
+        background: $project-blue;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        position: absolute;
+        top: -1px;
+        right: -6px;
+      }
+    }
+  }
+}
